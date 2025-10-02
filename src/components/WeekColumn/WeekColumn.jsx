@@ -1,4 +1,4 @@
-import { DayCell } from '@components/dayCell/DayCell.jsx';
+import { DayCell } from '@components';
 import { format } from 'date-fns';
 import styles from './WeekColumn.module.scss';
 
