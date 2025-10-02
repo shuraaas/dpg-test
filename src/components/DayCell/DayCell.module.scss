@@ -1,0 +1,19 @@
+.dayCell {
+  --dayCellBackgroundColor: var(--colorSoftPeach);
+
+  width: var(--dayCellSize);
+  height: var(--dayCellSize);
+  background: var(--dayCellBackgroundColor);
+  border: 1px solid transparent;
+  transition: border-color 0.1s linear;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--colorMediumGrey);
+  }
+
+  &.isSelected {
+    border-color: var(--colorBlackAlpha90);
+  }
+}

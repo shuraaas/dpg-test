@@ -1,0 +1,7 @@
+.contributionGraph {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  row-gap: 10px;
+  column-gap: 5px;
+}

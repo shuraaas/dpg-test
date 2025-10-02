@@ -1,0 +1,15 @@
+import { DayCell } from '@components/dayCell/DayCell.jsx';
+import { format } from 'date-fns';
+import styles from './WeekColumn.module.scss';
+
+export const WeekColumn = ({ week, data }) => {
+  const iso = date => format(date, 'yyyy-MM-dd');
+
+  return (
+    <ul className={styles.weekColumn}>
+      {week.map(day => (
+        <DayCell key={iso(day)} day={day} count={data[iso(day)]} />
+      ))}
+    </ul>
+  );
+};
