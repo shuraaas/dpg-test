@@ -1,0 +1,33 @@
+.tooltip {
+  --tooltipHeight: 40px;
+
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: var(--tooltipHeight);
+  background: var(--colorBlack);
+  color: var(--colorWhite);
+  padding: 10px;
+  border-radius: 3px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--colorBlack) transparent transparent transparent;
+  }
+
+  &.isVisible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
