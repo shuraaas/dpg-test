@@ -7,6 +7,17 @@ import { useOutsideClick } from '@hooks';
 import clsx from 'clsx';
 import styles from './DayCell.module.scss';
 
+/**
+ * Компонент DayCell.
+ *
+ * Отображает квадрат дня с насыщенностью цвета в зависимости от количества вкладов
+ * и показывает всплывающую подсказку с деталями по клику.
+ *
+ * @component
+ * @param {Object} props
+ * @param {Date} [props.day] - Дата, которую представляет ячейка.
+ * @param {{ count?: number, text?: string }} props.contributions - Данные о вкладах.
+ */
 export const DayCell = memo(({ day, contributions }) => {
   const [showTooltip, setShowTooltip] = useState(false);
   const tooltipRef = useRef(null);

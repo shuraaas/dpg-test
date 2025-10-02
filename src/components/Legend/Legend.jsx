@@ -1,6 +1,12 @@
 import { DayCell } from '@components';
 import styles from './Legend.module.scss';
 
+/**
+ * Компонент Legend.
+ *
+ * Показывает небольшую шкалу из примеров `DayCell` для обозначения интенсивности вкладов.
+ * @component
+ */
 export const Legend = () => {
   return (
     <div className={styles.legend}>

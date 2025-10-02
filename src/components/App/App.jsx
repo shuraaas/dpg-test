@@ -1,6 +1,12 @@
 import { ContributionGraph } from '@components';
 import styles from './App.module.scss';
 
+/**
+ * Корневой компонент приложения.
+ *
+ * Отображает график вкладов, используя URL API из переменных окружения.
+ * @component
+ */
 export const App = () => {
   return (
     <main className={styles.app}>

@@ -6,6 +6,16 @@ import { addDays, format, startOfWeek, subWeeks } from 'date-fns';
 import { ru } from 'date-fns/locale';
 import styles from './ContributionGraph.module.scss';
 
+/**
+ * Компонент ContributionGraph.
+ *
+ * Формирует календарную сетку на 51 неделю и отображает метки месяцев и дней недели,
+ * а также дни с вкладами, загружаемые по переданному адресу `dataUrl`.
+ *
+ * @component
+ * @param {Object} props
+ * @param {string} props.dataUrl - Адрес эндпоинта для загрузки данных о вкладах.
+ */
 export const ContributionGraph = ({ dataUrl = '' }) => {
   const { weeks, monthLabels } = useMemo(() => {
     const today = new Date();

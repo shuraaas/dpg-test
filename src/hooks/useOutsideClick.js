@@ -1,5 +1,12 @@
 import { useEffect } from 'react';
 
+/**
+ * Вызывает колбэк при клике вне переданного элемента.
+ *
+ * @param {{ current: HTMLElement | null }} ref - Ref на целевой элемент.
+ * @param {() => void} callback - Функция, вызываемая при клике вне элемента.
+ */
+
 export function useOutsideClick(ref, callback) {
   useEffect(() => {
     function handleClick(event) {

@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * Хук для получения данных по указанному URL.
+ * Управляет состояниями данных, ошибки и загрузки.
+ *
+ * @param {string} dataUrl - URL для запроса. При изменении выполняется повторный запрос.
+ * @returns {{data: Object, error: (string|null), loading: boolean}} Состояние: данные, ошибка или null, флаг загрузки.
+ */
+
 export const useFetchData = dataUrl => {
   const [data, setData] = useState({});
   const [error, setError] = useState(null);
