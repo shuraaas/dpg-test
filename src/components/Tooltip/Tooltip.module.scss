@@ -5,6 +5,8 @@
   bottom: calc(100% + 5px);
   left: 50%;
   transform: translateX(-50%);
+  min-width: max-content;
+  text-align: center;
   min-height: var(--tooltipHeight);
   background: var(--colorBlack);
   color: var(--colorWhite);
@@ -29,5 +31,9 @@
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease-in-out;
+  }
+
+  &Time {
+    color: var(--colorConcord);
   }
 }

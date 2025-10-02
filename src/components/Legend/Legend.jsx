@@ -6,11 +6,11 @@ export const Legend = () => {
     <div className={styles.legend}>
       <span>Меньше</span>
       <ul className={styles.legendSquares}>
-        <DayCell count={0} />
-        <DayCell count={5} />
-        <DayCell count={15} />
-        <DayCell count={25} />
-        <DayCell count={35} />
+        <DayCell contributions={{ count: 0, text: 'No' }} />
+        <DayCell contributions={{ count: 5, text: '1-9' }} />
+        <DayCell contributions={{ count: 15, text: '10-19' }} />
+        <DayCell contributions={{ count: 25, text: '20-29' }} />
+        <DayCell contributions={{ count: 35, text: '30+' }} />
       </ul>
       <span>Больше</span>
     </div>

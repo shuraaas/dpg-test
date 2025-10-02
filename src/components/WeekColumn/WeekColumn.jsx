@@ -8,7 +8,11 @@ export const WeekColumn = ({ week, data }) => {
   return (
     <ul className={styles.weekColumn}>
       {week.map(day => (
-        <DayCell key={iso(day)} day={day} count={data[iso(day)]} />
+        <DayCell
+          key={iso(day)}
+          day={day}
+          contributions={{ count: data[iso(day)] }}
+        />
       ))}
     </ul>
   );

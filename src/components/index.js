@@ -6,5 +6,5 @@ export { WeekColumn } from './WeekColumn';
 export { DayCell } from './DayCell';
 export { Legend } from './Legend';
 export { Loader } from './Loader';
-export { GraphDays } from './GraphDays';
+export { GraphDays } from './GraphDays/index.js';
 export { Tooltip } from './Tooltip';

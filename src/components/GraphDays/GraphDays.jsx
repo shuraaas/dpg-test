@@ -1,43 +1,9 @@
-import { Loader, MonthLabels, WeekColumn } from '@components';
-import { addDays, format, startOfWeek, subWeeks } from 'date-fns';
-import { ru } from 'date-fns/locale';
+import { Loader, WeekColumn } from '@components';
 import { useFetchData } from '@hooks';
 import styles from './GraphDays.module.scss';
 
-export const GraphDays = ({ dataUrl }) => {
-  const localeMonthFormat = 'MMM';
+export const GraphDays = ({ dataUrl, weeks }) => {
   const { data, error, loading } = useFetchData(dataUrl);
-  const {
-    weeks,
-    monthLabels,
-  } = () => {
-    const today = new Date();
-    const lastWeekStart = startOfWeek(today, { weekStartsOn: 1 }); // Понедельник
-    const weeks = [];
-
-    for (let week = 50; week >= 0; week--) {
-      const weekStart = subWeeks(lastWeekStart, week);
-      const days = [];
-
-      for (let day = 0; day < 7; day++) {
-        days.push(addDays(weekStart, day));
-      }
-      weeks.push(days);
-    }
-
-    const monthLabels = {};
-    let prevMonth = null;
-    weeks.forEach((week, idx) => {
-      const firstDay = week[0];
-      const m = firstDay.getMonth();
-      if (m !== prevMonth) {
-        monthLabels[idx] = format(firstDay, localeMonthFormat, { locale: ru });
-        prevMonth = m;
-      }
-    });
-
-    return { weeks, monthLabels };
-  };
 
   return (
     <div className={styles.graphDays}>
@@ -49,11 +15,6 @@ export const GraphDays = ({ dataUrl }) => {
           </li>
         ))}
       </ul>
-      <MonthLabels
-        weeks={weeks}
-        monthLabels={monthLabels}
-        localeMonthFormat={localeMonthFormat}
-      />
     </div>
   );
 };
