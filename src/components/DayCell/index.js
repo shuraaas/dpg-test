@@ -1,1 +1,1 @@
-export { DayCell } from './dayCell';
+export { DayCell } from './DayCell.jsx';

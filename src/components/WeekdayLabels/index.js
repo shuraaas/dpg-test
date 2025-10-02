@@ -1,1 +1,1 @@
-export { WeekdayLabels } from './WeekdayLabels';
+export { WeekdayLabels } from './WeekdayLabels.jsx';

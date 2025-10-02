@@ -1,1 +1,1 @@
-export { MonthLabels } from './MonthLabels';
+export { MonthLabels } from './MonthLabels.jsx';

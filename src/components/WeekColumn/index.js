@@ -1,1 +1,1 @@
-export { WeekColumn } from './WeekColumn';
+export { WeekColumn } from './WeekColumn.jsx';
