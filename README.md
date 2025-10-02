@@ -16,7 +16,7 @@ API_URL=https://your_api_url.com/
    ```
 2. Запустите приложение в режиме разработки:
    ```bash
-   npm start
+   npm run dev
    ```
 ## Структура проекта
 - `src/components/` — Компоненты календаря
